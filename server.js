@@ -48,8 +48,8 @@ app.post('/logs', async (req, res) => {
         req.body.shipIsBroken = false
     }
     try {
-        const createdLog = await Log.create(req.body)
-        res.send('received')
+        // const createdLog = await Log.create(req.body)
+        res.send(req.body)
         // res.redirect(`/logs/${createdLog._id}`)
     } catch(error) {
         res.status(400).send({message: error.message})
