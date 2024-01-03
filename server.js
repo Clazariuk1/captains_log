@@ -22,16 +22,16 @@ mongoose.connection.once('open', () => {
 // INDUCES
 
 // INDEX
-// app.get('/logs', async (req, res) => {
-//     try {
-//         const foundLogs = await Log.find({})
-//         res.render('logs/Index', {
-//             logs: foundLogs
-//         })
-//     } catch (error) {
-//         res.status(400).send({ message: error.message })
-//     }
-// })
+app.get('/logs', async (req, res) => {
+    try {
+        const foundLogs = await Log.find({})
+        res.render('logs/Index', {
+            logs: foundLogs
+        })
+    } catch (error) {
+        res.status(400).send({ message: error.message })
+    }
+})
 
 // NEW
 app.get('/logs/new', (req, res) => {
@@ -55,7 +55,7 @@ app.post('/logs', async (req, res) => {
 })
 
 // SHOW
-app.get('/fruits/:id', async (req, res) => {
+app.get('/logs/:id', async (req, res) => {
     try {
         const foundLog = await Log.findOne({_id: req.params.id})
 
