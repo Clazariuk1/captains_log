@@ -112,3 +112,6 @@ app.get('/logs/:id', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`All systems nomenal at Port ${PORT}, Captain.`)
 })
+
+
+// setTimeout(res.redirect('back'), 5000)

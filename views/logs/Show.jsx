@@ -1,4 +1,5 @@
 const React = require('react')
+const Log = require('../../models/logs')
 
 function Show(props) {
     return(
@@ -6,7 +7,8 @@ function Show(props) {
             <h1>{props.log.title}</h1>
             <a href='/logs'>Return to Logs Index</a>
             <p>
-                {/* Stardate: {props.log.createdAt} <br/> */}
+                <div>
+                Stardate: {props.log.createdAt.toString()} </div><br/>
                 {props.log.shipIsBroken? 'The ship is currently Broken': 'The ship is in working order'} <br/>
                 Captain's Log: <br/>{props.log.entry}
             </p>
