@@ -14,3 +14,5 @@ function New (props) {
         </div>
     )
 }
+
+module.exports = New

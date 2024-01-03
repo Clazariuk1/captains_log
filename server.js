@@ -3,6 +3,7 @@ const express = require('express')
 // const mongoose = require('mongoose')
 const jsxEngine = require('jsx-view-engine')
 const methodOverride = require('method-override')
+const Log = require('./models/logs')
 // const Log = require('.models/log')
 const PORT = process.env.PORT || 3000
 
@@ -36,6 +37,23 @@ app.engine('jsx', jsxEngine())
 // NEW
 app.get('/logs/new', (req, res) => {
     res.render('logs/New')
+})
+
+// CREATE
+
+app.post('/logs', async (req, res) => {
+    if(req.body.shipIsBroken === 'on'){
+        req.body.shipIsBroken = true
+    } else {
+        req.body.shipIsBroken = false
+    }
+    try {
+        const createdLog = await Log.create(req.body)
+        res.send('received')
+        // res.redirect(`/logs/${createdLog._id}`)
+    } catch(error) {
+        res.status(400).send({message: error.message})
+    }
 })
 
 app.listen(PORT, () => {
