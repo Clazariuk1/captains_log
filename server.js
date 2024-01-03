@@ -50,6 +50,24 @@ app.delete('/logs/:id', async (req, res) => {
     }
 })
 
+// UPDATE
+app.put('/logs/:id', async (req, res) => {
+    if(req.body.shipIsBroken === 'off') {
+        req.body.shipIsBroken = false
+    } else {
+        req.body.shipIsBroken = true
+    }
+    try {
+        await Log.findOneAndUpdate({ '_id': req.params.id},
+        req.body, { new: true})
+        .then(() => {
+            res.redirect(`/logs/${req.params.id}`)
+        })
+    } catch (error) {
+        res.status(400).send({ message: error.message})
+    }
+})
+
 // CREATE
 
 app.post('/logs', async (req, res) => {
@@ -63,6 +81,18 @@ app.post('/logs', async (req, res) => {
         res.redirect(`/logs/${createdLog._id}`)
     } catch(error) {
         res.status(400).send({message: error.message})
+    }
+})
+
+// EDIT
+app.get('/logs/:id/edit', async (req, res) => {
+    try {
+        const foundLog = await Log.findOne( {'_id': req.params.id})
+        res.render('logs/Edit', {
+            log: foundLog
+        })
+    } catch (error) {
+        res.status(400).send({ message: error.message })
     }
 })
 
