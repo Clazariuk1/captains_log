@@ -7,7 +7,8 @@ function Edit (props) {
     return(
         <Default type="log">
         <div>
-            <h1>{title} Edit Log </h1>
+            <h1>{title}</h1> <br/>
+            <h2>Edit Log? </h2> <br/>
             <a href='/logs'>Return to Captain's Logs Index</a>
             <form action={`/logs/${_id}?_method=PUT`} method="POST">
                 Title: <input type="text" name="title" defaultValue={title} /><br/>

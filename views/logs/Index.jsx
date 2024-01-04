@@ -13,7 +13,7 @@ function Index (props) {
                         return (
                             <li key={log._id}>
                                 <a href={`logs/${log._id}`}>{log.title}</a> <br />
-                                Stardate: {log.timestamps}
+                                Stardate: {log.createdAt.toString()}
                             </li>
                         )
                     })

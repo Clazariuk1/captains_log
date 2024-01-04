@@ -14,8 +14,8 @@ function Index (props) {
                     props.foodLogs.map((foodLog) => {
                         return (
                             <li key={foodLog._id}>
-                                <a href={`foodLogs/${foodLog._id}`}>{foodLog.title}</a> <br />
-                                Stardate: {foodLog.timestamps}
+                                <a href={`foodLogs/${foodLog._id}`}>{foodLog.name}</a> <br />
+                                Stardate: {foodLog.createdAt.toString()}
                             </li>
                         )
                     })
