@@ -8,7 +8,8 @@ function Show(props) {
             <a href='/logs'>Return to Logs Index</a>
             <p>
                 <div>
-                Stardate: {props.log.createdAt.toString()} </div><br/>
+                Captain's Log Stardate: {props.log.createdAt.toString()} </div><br/>
+                Last Log Update Performed On: {props.log.updatedAt.toString()} <br/>
                 {props.log.shipIsBroken? 'The ship is currently Broken': 'The ship is in working order'} <br/>
                 Captain's Log: <br/>{props.log.entry}
             </p>

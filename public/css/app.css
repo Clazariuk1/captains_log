@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Righteous');
+
+body {
+  background: url(https://images.clipartlogo.com/files/istock/previews/8741/87414357-apple-seamless-pastel-colors-pattern-fruits-texture-background.jpg);
+  margin: 0;
+  font-family: 'Comfortaa', cursive;
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+  background: antiquewhite;
+  margin:0;
+  margin-bottom: .5em;
+  padding: 1em;
+  text-align: center;
+}
+
+a {
+color: orange;
+text-decoration: none;
+text-shadow: 1px 1px 1px black;
+font-size: 1.5em;
+background: rgba(193, 235, 187, .9);
+}
+
+a:hover {
+color: ghostwhite;
+}
+
+li {
+list-style: none;
+}
+
+li a {
+color: mediumseagreen;
+}
+
+input[type=text] {
+padding: .3em;
+}
+
+input[type=submit] {
+padding: .3em;
+color: orange;
+background: mediumseagreen;
+font-size: 1em;
+border-radius: 10%;
+}
+
+/* * {
+    box-sizing: border-box;
+}
+
+html {
+font-size: 10pt;
+}
+
+body {
+    background-color: aqua;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: crimson;
+}
+
+input {
+    border: 1rem solid skyblue;
+    background-color: whitesmoke;
+}
+
+input:hover {
+    cursor: grab;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    font-size: 14pt;
+}
+
+h1 {
+    background-color: crimson;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    text-align: center;
+    font-weight: bold;
+}
+
+submit {
+    text-align: center;
+    font-weight: bold;
+}
+
+submit:hover {
+    cursor:grab;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+checkbox {
+    background-color: whitesmoke;
+    color: crimson;
+    border: solid .5rem skyblue;
+}
+
+checkbox:hover {
+    cursor: pointer;
+} */
