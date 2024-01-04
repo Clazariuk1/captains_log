@@ -1,7 +1,9 @@
 const React = require('react')
+const Default = require('../layout/Default')
 
 function Index (props) {
     return(
+        <Default type="log">
         <div>
             <h1>Captain's Log Index Page</h1>
             <a href="/logs/new">Add a Log Entry Here</a>
@@ -17,7 +19,9 @@ function Index (props) {
                     })
                 }
             </ul>
+            <a href='/foodLogs'>View Food Logs Index</a>
         </div>
+        </Default>
     )
 }
 

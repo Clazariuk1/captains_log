@@ -1,8 +1,11 @@
 const React = require('react')
 const FoodLog = require('../../models/foodLogs')
+const Default = require('../layout/Default')
+
 
 function Show(props) {
     return(
+        <Default type="foodLog">
         <div>
             <h1>{props.foodLog.name}</h1>
             <a href='/foodLogs'>Return to Food Logs Index</a>
@@ -17,9 +20,11 @@ function Show(props) {
                 <input type="submit" value={`Delete log ${props.foodLog.name}`} />
             </form>
             <div>
-                <a href={`/foodLogs/${props.foodLog._id}/edit`}><button>{`Edit food log ${props.foodLog.title}`}</button></a>
+                <a href={`/foodLogs/${props.foodLog._id}/edit`}><button>{`Edit food log ${props.foodLog.name}`}</button></a>
             </div>
+            <a href="/logs">View Captain's Log Entries Here</a>
         </div>
+        </Default>
     )
 }
 

@@ -1,8 +1,11 @@
 const React = require('react')
 const Log = require('../../models/logs')
+const Default = require('../layout/Default')
+
 
 function Show(props) {
     return(
+        <Default type="log">
         <div>
             <h1>{props.log.title}</h1>
             <a href='/logs'>Return to Logs Index</a>
@@ -19,7 +22,9 @@ function Show(props) {
             <div>
                 <a href={`/logs/${props.log._id}/edit`}><button>{`Edit log ${props.log.title}`}</button></a>
             </div>
+            <a href='/foodLogs'>View Food Logs Index</a>
         </div>
+        </Default>
     )
 }
 
