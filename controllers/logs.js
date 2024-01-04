@@ -1,6 +1,4 @@
-// you could pull whole app in here but you don't need it, you only need route
-//certain languages work different ways. sometimes universal import, sometimes localized import. EVERY FILE needs the import given.
-// You DONT need upper/lowercase naming. you can use _ instead. ex : _router instead of Router . gives variation between the variable names.
+
 const Log = require('../models/logs')
 
 const express = require('express')
