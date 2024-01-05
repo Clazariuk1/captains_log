@@ -15,7 +15,8 @@ function Index (props) {
                         return (
                             <li key={foodLog._id}>
                                 <a href={`foodLogs/${foodLog._id}`}>{foodLog.name}</a> <br />
-                                Stardate: {foodLog.createdAt.toLocaleString()}
+                                <span id="index-timestamp">Stardate: {foodLog.createdAt.toLocaleString()}</span>
+                                StardateTEST: {foodLog.Date}
                             </li>
                         )
                     })

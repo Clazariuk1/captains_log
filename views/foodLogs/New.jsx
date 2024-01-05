@@ -10,6 +10,7 @@ function New (props) {
             <h1>New Food Logs</h1>
             <a href='/foodLogs'>Return to Food Logs Index</a>
             <form action="/foodLogs" method="POST">
+                Date: <input type="datetime-local" name="date" /><br/>
                 Name: <input type="text" name="name" /> <br />
                 Description: <input type="textarea" name="description" /> <br />
                 WouldOrderAgain: <input type="checkbox" name="wouldOrderAgain" defaultChecked /><br />

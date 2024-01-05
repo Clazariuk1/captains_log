@@ -11,7 +11,7 @@ function Edit (props) {
             <h2>Edit Log? </h2> <br/>
             <a href='/logs'>Return to Captain's Logs Index</a>
             <form action={`/logs/${_id}?_method=PUT`} method="POST">
-                Date: <input type="datetime-local" name="date" /><br/>
+                Date: <input type="datetime-local" name="date" defaultValue={date}/><br/>
                 Title: <input type="text" name="title" defaultValue={title} /><br/>
                 Entry: <input type="textarea" name="entry" defaultValue={entry}/><br/>
                 Is the Ship Broken: {shipIsBroken? <input type="checkbox" name="shipIsBroken" defaultChecked />: <input type='checkbox' name="shipIsBroken"/>} <br/>

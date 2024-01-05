@@ -10,6 +10,7 @@ function Show(props) {
             <h1 id="food">{props.foodLog.name}</h1>
             <a id="food" href='/foodLogs'>Return to Food Logs Index</a>
             <div>
+                <div id="input-time">Time/Date Input: {props.foodLog.date}</div>
                 <span id="timestamp"> Captain's Food Log Stardate: {props.foodLog.createdAt.toLocaleString()} </span><br/>
                 <span id="time-update">Last Food Log Update Performed On: {props.foodLog.updatedAt.toLocaleString()} </span><br/>
                 <div id="status"> {props.foodLog.wouldOrderAgain? 'I would order this again': 'I would not order this again'} </div><br/>
