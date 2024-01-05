@@ -6,7 +6,7 @@ const Default = require('../layout/Default')
 function New (props) {
     return(
         <Default type="foodLog">
-        <div>
+        <div id="food">
             <h1>New Food Logs</h1>
             <a href='/foodLogs'>Return to Food Logs Index</a>
             <form action="/foodLogs" method="POST">

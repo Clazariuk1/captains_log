@@ -6,16 +6,16 @@ const FoodLog = require('../../models/foodLogs')
 function Index (props) {
     return(
         <Default type="foodLog">
-        <div>
+        <div id="food">
             <h1>Captain's Food Log Index Page</h1>
             <a href="/foodLogs/new">Add a Log Entry Here</a>
-            <ul>
+            <ul id="food">
                 {
                     props.foodLogs.map((foodLog) => {
                         return (
                             <li key={foodLog._id}>
                                 <a href={`foodLogs/${foodLog._id}`}>{foodLog.name}</a> <br />
-                                Stardate: {foodLog.createdAt.toString()}
+                                Stardate: {foodLog.createdAt.toLocaleString()}
                             </li>
                         )
                     })

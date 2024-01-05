@@ -5,15 +5,16 @@ const Default = require('../layout/Default')
 
 
 function Edit (props) {
-    const { name, _id, wouldOrderAgain, description } = props.foodLog
+    const { Date, name, _id, wouldOrderAgain, description } = props.foodLog
     return(
         <Default type="foodLog">
-        <div>
+        <div id="food">
             <h1>{name} Edit Food Log </h1>
             <a href='/foodLogs'>Return to Food Logs Index</a>
             <form action={`/foodLogs/${_id}?_method=PUT`} method="POST">
-                name: <input type="text" name="title" defaultValue={name} /><br/>
-                description: <input type="textarea" name="entry" defaultValue={description}/><br/>
+                Date: <input type="datetime-local" name="date" /><br/>
+                Name: <input type="text" name="title" defaultValue={name} /><br/>
+                Description: <input type="textarea" name="entry" defaultValue={description}/><br/>
                 WouldOrderAgain: {wouldOrderAgain? <input type="checkbox" name="wouldOrderAgain" defaultChecked />: <input type='checkbox' name="wouldOrderAgain"/>} <br/>
                 <input type="submit" value="Update Food Log" />
             </form>

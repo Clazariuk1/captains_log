@@ -6,10 +6,11 @@ function New (props) {
     return(
         <Default type="log">
 
-        <div>
+        <div id="new">
             <h1>New Logs</h1>
             <a href='/logs'>Return to Logs Index</a>
             <form action="/logs" method="POST">
+                Date: <input type="datetime-local" name="date" /><br/>
                 Title: <input type="text" name="title" /> <br />
                 Entry: <input type="textarea" name="entry" /> <br />
                 shipIsBroken: <input type="checkbox" name="shipIsBroken" defaultChecked /><br />

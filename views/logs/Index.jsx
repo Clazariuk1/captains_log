@@ -4,7 +4,7 @@ const Default = require('../layout/Default')
 function Index (props) {
     return(
         <Default type="log">
-        <div>
+        <div id="logIndex">
             <h1>Captain's Log Index Page</h1>
             <a href="/logs/new">Add a Log Entry Here</a>
             <ul>
@@ -13,7 +13,7 @@ function Index (props) {
                         return (
                             <li key={log._id}>
                                 <a href={`logs/${log._id}`}>{log.title}</a> <br />
-                                Stardate: {log.createdAt.toString()}
+                                <span id="index-timestamp">Stardate: {log.createdAt.toLocaleString()}</span>
                             </li>
                         )
                     })
